@@ -13,7 +13,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../org.bipolis/pom.xml</relativePath>
 	</parent>
-	<description>The latex project</description>
+	<description>The Common - Project</description>
 	<scm>
 		<connection>scm:git:https://github.com/bipolis/org.bipolis.common.git</connection>
 		<developerConnection>scm:git:https://github.com/bipolis/org.bipolis.git</developerConnection>
@@ -22,5 +22,6 @@
 	<modules>
 		<module>org.bipolis.common.builder</module>
 		<module>org.bipolis.common.command</module>
+		<module>org.bipolis.common.runtime</module>
 	</modules>
 </project>

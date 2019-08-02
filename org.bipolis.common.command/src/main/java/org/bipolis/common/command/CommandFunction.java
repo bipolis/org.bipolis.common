@@ -9,13 +9,13 @@ import org.osgi.service.component.annotations.ComponentPropertyType;
 @ComponentPropertyType
 public @interface CommandFunction {
 
-  /** The Constant PREFIX_. */
-  public static final String PREFIX_ = "osgi.";
+	/** The Constant PREFIX_. */
+	public static final String PREFIX_ = "osgi.";
 
-  /**
-   * Value.
-   *
-   * @return the string[]
-   */
-  public String[] value();
+	/**
+	 * Value.
+	 *
+	 * @return the string[]
+	 */
+	public String[] value();
 }

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -7,10 +8,10 @@
 		<artifactId>org.bipolis.common</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>org.bipolis.common.command</artifactId>
+	<artifactId>org.bipolis.common.runtime</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<description>The Common - Project</description>
+	<description>The Common - runtime</description>
 
 	<dependencies>
 		<dependency>
@@ -19,6 +20,7 @@
 			<type>pom</type>
 		</dependency>
 	</dependencies>
+
 	<build>
 		<plugins>
 			<!-- Expected to inherit configuration from a parent pom. This includes 
@@ -33,5 +35,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
