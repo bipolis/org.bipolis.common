@@ -2,11 +2,9 @@
 
 The Common - Project
 
-## Source Repository
+## Links
 
-**Browse**: [https://github.com/bipolis/org.bipolis.common](https://github.com/bipolis/org.bipolis.common).
-
-**Clone**: [scm:git:https://github.com/bipolis/org.bipolis.git](scm:git:https://github.com/bipolis/org.bipolis.git).
+* [Source Code](https://github.com/bipolis/org.bipolis.common) (clone with `scm:git:https://github.com/bipolis/org.bipolis.git`)
 
 ## Built Artifacts
 

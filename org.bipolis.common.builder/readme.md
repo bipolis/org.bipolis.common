@@ -2,11 +2,9 @@
 
 The Common - Builder
 
-## Source Repository
+## Links
 
-**Browse**: [https://github.com/bipolis/org.bipolis.common/org.bipolis.common.builder](https://github.com/bipolis/org.bipolis.common/org.bipolis.common.builder).
-
-**Clone**: [scm:git:https://github.com/bipolis/org.bipolis.git/org.bipolis.common.builder](scm:git:https://github.com/bipolis/org.bipolis.git/org.bipolis.common.builder).
+* [Source Code](https://github.com/bipolis/org.bipolis.common/org.bipolis.common.builder) (clone with `scm:git:https://github.com/bipolis/org.bipolis.git/org.bipolis.common.builder`)
 
 ## Coordinates
 
@@ -23,8 +21,18 @@ The Common - Builder
 ### OSGi
 
 ```
-Bundle Symbolic Name: org.bipolis.common.builder
-Version             : 0.0.1.201908022331
+Bundle Symbolic Name: 
+Version             : 0.0.0
+```
+
+### Feature-Coordinate
+
+```
+"bundles": [
+   {
+    "id": "org.bipolis:org.bipolis.common.builder:0.0.1-SNAPSHOT"
+   }
+]
 ```
 
 ---

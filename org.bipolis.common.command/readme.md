@@ -2,11 +2,9 @@
 
 The Common - Project
 
-## Source Repository
+## Links
 
-**Browse**: [https://github.com/bipolis/org.bipolis.common/org.bipolis.common.command](https://github.com/bipolis/org.bipolis.common/org.bipolis.common.command).
-
-**Clone**: [scm:git:https://github.com/bipolis/org.bipolis.git/org.bipolis.common.command](scm:git:https://github.com/bipolis/org.bipolis.git/org.bipolis.common.command).
+* [Source Code](https://github.com/bipolis/org.bipolis.common/org.bipolis.common.command) (clone with `scm:git:https://github.com/bipolis/org.bipolis.git/org.bipolis.common.command`)
 
 ## Coordinates
 
@@ -23,8 +21,18 @@ The Common - Project
 ### OSGi
 
 ```
-Bundle Symbolic Name: org.bipolis.common.command
-Version             : 0.0.1.201908022331
+Bundle Symbolic Name: 
+Version             : 0.0.0
+```
+
+### Feature-Coordinate
+
+```
+"bundles": [
+   {
+    "id": "org.bipolis:org.bipolis.common.command:0.0.1-SNAPSHOT"
+   }
+]
 ```
 
 ---

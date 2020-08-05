@@ -16,6 +16,7 @@
 		<dependency>
 			<groupId>org.bipolis</groupId>
 			<artifactId>org.bipolis.indexes.osgi-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
 			<type>pom</type>
 		</dependency>
 	</dependencies>

@@ -2,11 +2,9 @@
 
 The Common - runtime
 
-## Source Repository
+## Links
 
-**Browse**: [https://github.com/bipolis/org.bipolis.common/org.bipolis.common.runtime](https://github.com/bipolis/org.bipolis.common/org.bipolis.common.runtime).
-
-**Clone**: [scm:git:https://github.com/bipolis/org.bipolis.git/org.bipolis.common.runtime](scm:git:https://github.com/bipolis/org.bipolis.git/org.bipolis.common.runtime).
+* [Source Code](https://github.com/bipolis/org.bipolis.common/org.bipolis.common.runtime) (clone with `scm:git:https://github.com/bipolis/org.bipolis.git/org.bipolis.common.runtime`)
 
 ## Coordinates
 
@@ -24,8 +22,32 @@ The Common - runtime
 
 ```
 Bundle Symbolic Name: org.bipolis.common.runtime
-Version             : 0.0.1.201908022331
+Version             : 0.0.1.201911291941
 ```
+
+## Components
+
+### org.bipolis.common.runtime.simple.SimpleProcessBuilderExecutor - *state = enabled, activation = delayed*
+
+#### Services - *scope = singleton*
+
+|Interface name |
+|--- |
+|org.bipolis.common.runtime.api.ProcessBuilderExecutor |
+
+#### Properties
+
+No properties.
+
+#### Configuration - *policy = optional*
+
+##### Pid: `org.bipolis.common.runtime.simple.SimpleProcessBuilderExecutor`
+
+No information available.
+
+## Copyright
+
+Copyright (c) Stefan Bischof (2019). All Rights Reserved.
 
 ---
 bipolis - [https://bipolis.org/](https://bipolis.org/)
