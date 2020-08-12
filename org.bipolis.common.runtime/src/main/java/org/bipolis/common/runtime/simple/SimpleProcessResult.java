@@ -35,7 +35,7 @@ public class SimpleProcessResult implements ProcessResult {
 
 
     /**
-     * @param exitValue2
+     * @param exitValue
      * @param inputLines
      * @param errorLines
      * @param timedOut

@@ -22,6 +22,7 @@
 	<modules>
 		<module>org.bipolis.common.builder</module>
 		<module>org.bipolis.common.command</module>
+        <module>org.bipolis.common.http.client</module>
 		<module>org.bipolis.common.runtime</module>
 	</modules>
 </project>
