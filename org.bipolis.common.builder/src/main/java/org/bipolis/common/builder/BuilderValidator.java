@@ -1,6 +1,5 @@
 package org.bipolis.common.builder;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class BuilderValidator.
  */

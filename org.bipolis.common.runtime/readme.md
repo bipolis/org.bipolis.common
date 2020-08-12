@@ -22,12 +22,24 @@ The Common - runtime
 
 ```
 Bundle Symbolic Name: org.bipolis.common.runtime
-Version             : 0.0.1.201911291941
+Version             : 0.0.1.202008122220
+```
+
+### Feature-Coordinate
+
+```
+"bundles": [
+   {
+    "id": "org.bipolis:org.bipolis.common.runtime:0.0.1-SNAPSHOT"
+   }
+]
 ```
 
 ## Components
 
 ### org.bipolis.common.runtime.simple.SimpleProcessBuilderExecutor - *state = enabled, activation = delayed*
+
+#### Description
 
 #### Services - *scope = singleton*
 
@@ -45,9 +57,33 @@ No properties.
 
 No information available.
 
+#### Reference bindings
+
+No bindings.
+
+#### OSGi-Configurator
+
+
+```
+/*
+ * Component: org.bipolis.common.runtime.simple.SimpleProcessBuilderExecutor
+ * policy:    optional
+ */
+"org.bipolis.common.runtime.simple.SimpleProcessBuilderExecutor":{
+        //# Component properties
+        // none
+
+        //# Reference bindings
+        // none
+
+        //# ObjectClassDefinition - Attributes
+        // (No PidOcd available.)
+}
+```
+
 ## Copyright
 
-Copyright (c) Stefan Bischof (2019). All Rights Reserved.
+Copyright (c) Stefan Bischof (2020). All Rights Reserved.
 
 ---
 bipolis - [https://bipolis.org/](https://bipolis.org/)

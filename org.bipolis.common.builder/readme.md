@@ -21,8 +21,8 @@ The Common - Builder
 ### OSGi
 
 ```
-Bundle Symbolic Name: 
-Version             : 0.0.0
+Bundle Symbolic Name: org.bipolis.common.builder
+Version             : 0.0.1.202008122052
 ```
 
 ### Feature-Coordinate
@@ -34,6 +34,10 @@ Version             : 0.0.0
    }
 ]
 ```
+
+## Copyright
+
+Copyright (c) Stefan Bischof (2020). All Rights Reserved.
 
 ---
 bipolis - [https://bipolis.org/](https://bipolis.org/)

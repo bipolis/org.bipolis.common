@@ -1,0 +1,49 @@
+-runstartlevel: \
+    order=sortbynameversion,\
+    begin=-1
+    
+-tester: biz.aQute.tester.junit-platform
+
+-runvm: ${def;argLine}
+
+-runfw: org.eclipse.osgi
+-resolve.effective: active
+-runproperties: \
+	logback.configurationFile=file:${.}/logback.xml,\
+	org.apache.felix.http.host=localhost,\
+	org.osgi.service.http.port=*,\
+	org.osgi.framework.bootdelegation=sun.reflect,\
+	osgi.console=
+	
+-runsystempackages: \
+	org.slf4j;version=1.7.25,\
+	org.slf4j.helpers;version=1.7.25,\
+	org.slf4j.spi;version=1.7.25
+-runpath: \
+	ch.qos.logback.classic,\
+	ch.qos.logback.core,\
+	org.apache.felix.logback,\
+	slf4j.api
+-runrequires: \
+	bnd.identity;id='${project.artifactId}-tests',\
+	bnd.identity;id='junit-jupiter-engine',\
+	bnd.identity;id='junit-platform-launcher'
+# Please try and keep this sorted to make diffing more consistent
+--runee: JavaSE-11
+-runbundles: \
+	assertj-core;version='[3.16.1,3.16.2)',\
+	junit-jupiter-api;version='[5.6.2,5.6.3)',\
+	junit-jupiter-engine;version='[5.6.2,5.6.3)',\
+	junit-jupiter-params;version='[5.6.2,5.6.3)',\
+	junit-platform-commons;version='[1.6.2,1.6.3)',\
+	junit-platform-engine;version='[1.6.2,1.6.3)',\
+	junit-platform-launcher;version='[1.6.2,1.6.3)',\
+	org.apache.felix.scr;version='[2.1.20,2.1.21)',\
+	org.bipolis.common.runtime;version='[0.0.1,0.0.2)',\
+	org.bipolis.common.runtime-tests;version='[0.0.1,0.0.2)',\
+	org.opentest4j;version='[1.2.0,1.2.1)',\
+	org.osgi.test.common;version='[0.10.0,0.10.1)',\
+	org.osgi.test.junit5;version='[0.10.0,0.10.1)',\
+	org.osgi.util.function;version='[1.1.0,1.1.1)',\
+	org.osgi.util.promise;version='[1.1.1,1.1.2)'
+-runee: JavaSE-11

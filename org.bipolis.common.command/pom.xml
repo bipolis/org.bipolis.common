@@ -1,38 +1,26 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.bipolis</groupId>
-		<artifactId>org.bipolis.common</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
-	<artifactId>org.bipolis.common.command</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.bipolis</groupId>
+        <artifactId>org.bipolis.common</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>org.bipolis.common.command</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 
-	<description>The Common - Project</description>
+    <description>The Common - Project</description>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.bipolis</groupId>
-			<artifactId>org.bipolis.indexes.osgi-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-			<type>pom</type>
-		</dependency>
-	</dependencies>
-	<build>
-		<plugins>
-			<!-- Expected to inherit configuration from a parent pom. This includes 
-				-contract definitions and maven-jar-plugin setup -->
-			<plugin>
-				<groupId>biz.aQute.bnd</groupId>
-				<artifactId>bnd-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>biz.aQute.bnd</groupId>
-				<artifactId>bnd-baseline-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+    <dependencies>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>osgi.cmpn</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>osgi.annotation</artifactId>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 </project>

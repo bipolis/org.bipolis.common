@@ -14,14 +14,28 @@
     <dependencies>
         <dependency>
             <groupId>org.osgi</groupId>
+            <artifactId>osgi.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>osgi.cmpn</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>osgi.annotation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
             <artifactId>org.osgi.util.pushstream</artifactId>
-            <version>1.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.util.promise</artifactId>
         </dependency>
         <dependency>
             <groupId>org.bipolis</groupId>
-            <artifactId>org.bipolis.indexes.osgi-api</artifactId>
-            <!-- <version>0.0.1-SNAPSHOT</version> -->
-            <type>pom</type>
+            <artifactId>org.bipolis.common.builder</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 
