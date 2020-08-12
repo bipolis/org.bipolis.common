@@ -22,7 +22,7 @@ The Common - runtime
 
 ```
 Bundle Symbolic Name: org.bipolis.common.runtime
-Version             : 0.0.1.202008122220
+Version             : 0.0.1.202008122248
 ```
 
 ### Feature-Coordinate

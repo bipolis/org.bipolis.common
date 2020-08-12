@@ -51,7 +51,6 @@ class OutputHandler extends Thread implements Closeable
             String line;
             while ((line = bufferedReader.readLine()) != null)
             {
-                System.out.println("---" + line);
                 synchronized (processEventHandler)
                 {
                     processEventHandler.nextLine(line, streamType);

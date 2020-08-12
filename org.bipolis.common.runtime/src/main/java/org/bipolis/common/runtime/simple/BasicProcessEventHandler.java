@@ -49,8 +49,9 @@ public class BasicProcessEventHandler implements ProcessEventHandler
     public void nextLine(String line, StreamType streamType)
     {
         //        PushStreamProvider pushStreamProvider = new PushStreamProvider();
-        //        SimplePushEventSource eventSource = .createSimpleEventSource(String.class);
+        //        SimplePushEventSource<String> eventSource = pushStreamProvider.createSimpleEventSource(String.class);
         //        eventSource.publish(line);
+        //        eventSource.error(t);
         //        pushStreamProvider.createStream(eventSource).
 
         switch (streamType)
