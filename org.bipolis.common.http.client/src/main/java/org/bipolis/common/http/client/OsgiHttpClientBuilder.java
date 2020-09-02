@@ -37,7 +37,6 @@ public class OsgiHttpClientBuilder extends AbstractHttpClientBuilder
     public static @interface HttpClientConfig
     {
 
-
         Redirect followRedirects() default Redirect.NORMAL;
 
         long timeoutMs() default -1;
@@ -48,7 +47,6 @@ public class OsgiHttpClientBuilder extends AbstractHttpClientBuilder
     @Activate
     private void activate(HttpClientConfig cfg)
     {
-
         if (authenticator != null)
         {
             builder.authenticator(authenticator);

@@ -8,10 +8,8 @@
     </parent>
     <artifactId>org.bipolis.http.client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
     <description>The http.client - Project</description>
-
-<dependencies>
+    <dependencies>
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>osgi.core</artifactId>
@@ -24,11 +22,9 @@
             <groupId>org.osgi</groupId>
             <artifactId>osgi.annotation</artifactId>
         </dependency>
-        
-                <dependency>
+        <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>osgi.annotation</artifactId>
         </dependency>
     </dependencies>
-
 </project>
