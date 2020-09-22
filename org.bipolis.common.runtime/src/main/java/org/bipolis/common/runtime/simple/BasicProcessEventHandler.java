@@ -10,15 +10,19 @@ import java.util.List;
 import org.bipolis.common.runtime.api.ProcessEventHandler;
 import org.bipolis.common.runtime.api.ProcessResult;
 import org.bipolis.common.runtime.api.StreamType;
+import org.osgi.util.pushstream.PushStreamProvider;
+import org.osgi.util.pushstream.SimplePushEventSource;
 
 public class BasicProcessEventHandler implements ProcessEventHandler
 {
+
     private final List<String> inputLines = new ArrayList<>();
     private final List<String> errorLines = new ArrayList<>();
     private Integer exitValue;
 
     boolean stop = false;
     private boolean timedOut;
+    private Process process;
 
     @Override
     public void exit(int exitValue)
@@ -48,11 +52,12 @@ public class BasicProcessEventHandler implements ProcessEventHandler
     @Override
     public void nextLine(String line, StreamType streamType)
     {
-        //        PushStreamProvider pushStreamProvider = new PushStreamProvider();
-        //        SimplePushEventSource<String> eventSource = pushStreamProvider.createSimpleEventSource(String.class);
-        //        eventSource.publish(line);
-        //        eventSource.error(t);
-        //        pushStreamProvider.createStream(eventSource).
+        PushStreamProvider pushStreamProvider = new PushStreamProvider();
+        SimplePushEventSource<String> eventSource = pushStreamProvider.createSimpleEventSource(
+            String.class);
+        eventSource.publish(line);
+        //                eventSource.error(t);
+        pushStreamProvider.createStream(eventSource);
 
         switch (streamType)
         {
@@ -97,6 +102,12 @@ public class BasicProcessEventHandler implements ProcessEventHandler
             Thread.yield();
         }
         return new SimpleProcessResult(exitValue, inputLines, errorLines, timedOut);
+    }
+
+    @Override
+    public void init(Process process)
+    {
+        this.process = process;
     }
 
 }

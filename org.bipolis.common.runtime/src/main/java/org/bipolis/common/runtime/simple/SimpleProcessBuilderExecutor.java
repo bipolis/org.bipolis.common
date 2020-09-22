@@ -9,7 +9,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 import org.bipolis.common.runtime.api.ProcessBuilderExecutor;
-import org.bipolis.common.runtime.api.ProcessEventHandler;
 import org.bipolis.common.runtime.api.ProcessResult;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.util.promise.Promise;
@@ -40,6 +39,7 @@ public class SimpleProcessBuilderExecutor implements ProcessBuilderExecutor
         final int timeOutTime, final TimeUnit timeOutTimeUnit)
             throws IOException, InterruptedException
     {
+
         BasicProcessEventHandler basicProcessEventHandler = new BasicProcessEventHandler();
         Util.runCommand(processBuilder, timeOutTime, timeOutTimeUnit,
             basicProcessEventHandler);
@@ -64,15 +64,6 @@ public class SimpleProcessBuilderExecutor implements ProcessBuilderExecutor
         final var promise = pf.submit(
             () -> execute(processBuilder, timeOutTime, timeOutTimeUnit));
         return promise;
-    }
-
-    @Override
-    public Process execute(ProcessBuilder processBuilder, int timeOutTime,
-        TimeUnit timeOutTimeUnit, ProcessEventHandler processEventHandler)
-            throws IOException, InterruptedException
-    {
-
-        return null;
     }
 
 }

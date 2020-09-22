@@ -12,7 +12,8 @@ import org.bipolis.common.runtime.api.StreamType;
  *
  * @author stbischof
  */
-public class Util {
+public class Util
+{
 
     /**
      * Run command.
@@ -27,47 +28,48 @@ public class Util {
      * @throws InterruptedException         the interrupted exception
      * @throws UnsupportedEncodingException the unsupported encoding exception
      */
-    public static void runCommand(ProcessBuilder processBuilder,
-        int timeOutTime, TimeUnit timeOutTimeUnit, ProcessEventHandler processEventHandler)
+    public static Process runCommand(ProcessBuilder processBuilder, int timeOutTime,
+        TimeUnit timeOutTimeUnit, ProcessEventHandler processEventHandler)
     {
-
-        Process process;
         try
         {
             processBuilder.redirectInput();
-        process = processBuilder.start();
-
-
-        new Thread(() -> {
-            try (final OutputHandler out = new OutputHandler(process,processEventHandler,StreamType.INPUT);
-                final OutputHandler err = new OutputHandler(process, processEventHandler,
-                    StreamType.ERROR);)
-            {
-                final boolean runInTime = process.waitFor(timeOutTime, timeOutTimeUnit);
-                if (runInTime)
+            Process process = processBuilder.start();
+            processEventHandler.init(process);
+            new Thread(() -> {
+                try (
+                    final OutputHandler out = new OutputHandler(process,
+                        processEventHandler, StreamType.INPUT);
+                    final OutputHandler err = new OutputHandler(process,
+                        processEventHandler, StreamType.ERROR);)
                 {
-                    processEventHandler.exit(process.exitValue());
+                    final boolean runInTime = process.waitFor(timeOutTime,
+                        timeOutTimeUnit);
+                    if (runInTime)
+                    {
+                        processEventHandler.exit(process.exitValue());
+                    }
+                    else
+                    {
+                        processEventHandler.timeout();
+                    }
                 }
-                else
+                catch (IOException e)
                 {
-                    processEventHandler.timeout();
+                    // ignore
+                    e.printStackTrace();
                 }
-            }
-            catch (IOException e)
-            {
-                // ignore
-                e.printStackTrace();
-            }
-            catch (InterruptedException e)
-            {
-                processEventHandler.processInterrupted(e);
-            }
-        }).start();
+                catch (InterruptedException e)
+                {
+                    processEventHandler.processInterrupted(e);
+                }
+            }).start();
+            return process;
         }
         catch (IOException startException)
         {
             processEventHandler.startException(startException);
         }
-
+        return null;
     }
 }

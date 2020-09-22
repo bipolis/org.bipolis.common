@@ -5,6 +5,7 @@ import java.io.IOException;
 public interface ProcessEventHandler
 {
 
+    void init(Process process);
 
     void nextLine(String line, StreamType streamType);
 

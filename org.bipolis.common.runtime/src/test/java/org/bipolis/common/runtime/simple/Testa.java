@@ -100,8 +100,16 @@ public class Testa
             {
                 fail("shoult not exit");
             }
+
+            @Override
+            public void init(Process process)
+            {
+
+                assertThat(process).isNotNull();
+
+            }
         };
-        executor.execute(new ProcessBuilder("ping", "www.google.de"), 5, TimeUnit.SECONDS,
+        Util.runCommand(new ProcessBuilder("ping", "www.google.de"), 5, TimeUnit.SECONDS,
             peh);
 
     }

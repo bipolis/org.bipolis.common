@@ -8,7 +8,8 @@ import org.bipolis.common.runtime.api.ProcessResult;
 /**
  * The Class SimpleRuntimeProcessResult.
  */
-public class SimpleProcessResult implements ProcessResult {
+public class SimpleProcessResult implements ProcessResult
+{
 
     /**
      * Checks for.
@@ -32,7 +33,6 @@ public class SimpleProcessResult implements ProcessResult {
     private final Integer exitValue;
 
     private final boolean timedOut;
-
 
     /**
      * @param exitValue
@@ -66,7 +66,8 @@ public class SimpleProcessResult implements ProcessResult {
      * @return the exit value
      */
     @Override
-    public Integer getExitValue() {
+    public Integer getExitValue()
+    {
 
         return exitValue;
     }
@@ -89,7 +90,8 @@ public class SimpleProcessResult implements ProcessResult {
      * @return true, if successful
      */
     @Override
-    public boolean hasError() {
+    public boolean hasError()
+    {
 
         return has(errorLines);
     }
@@ -100,7 +102,8 @@ public class SimpleProcessResult implements ProcessResult {
      * @return true, if successful
      */
     @Override
-    public boolean hasOutput() {
+    public boolean hasOutput()
+    {
 
         return has(lines);
     }
@@ -111,7 +114,8 @@ public class SimpleProcessResult implements ProcessResult {
      * @return true, if is timed out
      */
     @Override
-    public boolean isTimedOut() {
+    public boolean isTimedOut()
+    {
 
         return exitValue == null;
     }
